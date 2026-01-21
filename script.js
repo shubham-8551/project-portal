@@ -1,26 +1,22 @@
+let generatedUserId = "";
+
 function register() {
-    let mobile = document.getElementById("mobile").value;
-    let email = document.getElementById("email").value;
+  let mobile = document.getElementById("mobile").value;
+  let email = document.getElementById("email").value;
 
-    if (mobile.length !== 10 || email === "") {
-        alert("Enter valid mobile number and email");
-        return;
-    }
+  if (mobile.length !== 10 || email === "") {
+    alert("Enter valid mobile number and email");
+    return;
+  }
 
-    alert("Registration Successful!");
-    document.getElementById("unlockBox").style.display = "block";
-}
+  // Generate unique ID
+  generatedUserId = "UID" + Math.floor(100000 + Math.random() * 900000);
 
-function shareContacts() {
-    alert("10 Contacts shared successfully!");
-    unlockProjects();
-}
+  document.getElementById("userIdMsg").style.display = "block";
+  document.getElementById("userIdMsg").innerText =
+    "Your Unique ID: " + generatedUserId +
+    " (Sent to Email & Mobile)";
 
-function pay() {
-    alert("₹100 Payment Successful! (Demo)");
-    unlockProjects();
-}
-
-function unlockProjects() {
-    document.getElementById("projects").style.display = "block";
+  // Show Step 2
+  document.getElementById("unlockBox").style.display = "block";
 }
