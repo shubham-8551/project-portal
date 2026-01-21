@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Developer Project Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Developer Project Access</h2>
+
+<div class="box">
+    <h3>User Registration</h3>
+    <input type="text" id="mobile" placeholder="Mobile Number">
+    <input type="email" id="email" placeholder="Email ID">
+    <button onclick="register()">Register</button>
+</div>
+
+<div class="box" id="unlockBox" style="display:none;">
+    <h3>Unlock Projects</h3>
+    <button onclick="shareContacts()">Share 10 Contacts</button>
+    <button onclick="pay()">Pay ₹100</button>
+</div>
+
+<div class="box" id="projects" style="display:none;">
+    <h3>Project List</h3>
+    <ul>
+        <li>Employee Management System</li>
+        <li>Online Shopping App</li>
+        <li>Banking System</li>
+        <li>Student Portal</li>
+    </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
